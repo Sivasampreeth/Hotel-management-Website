@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <link rel="stylesheet" href=".css">
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f2f2;
+    background-image:url('https://media.istockphoto.com/photos/close-up-on-customer-man-hand-pressing-on-smartphone-screen-with-five-picture-id1303530194?b=1&k=20&m=1303530194&s=170667a&w=0&h=ukLDaFjMtkDjRMBX5sIx027Eu7OKYgaaEc5DyKFL5fc=');
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+section{
+  position: relative;  
+  height: 450px;
+  width: 1075px;
+  display: flex;
+  align-items: center;
+}
+
+.swiper{
+  width: 950px;
+}
+
+.card{
+  position: relative;
+  background: #fff;
+  border-radius: 20px;
+  margin: 20px 0;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card::before{
+  content: "";
+  position: absolute;
+  height: 40%;
+  width: 100%;
+  background: #7d2ae8;
+  border-radius: 20px 20px 0 0;
+}
+
+.card .card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  position: relative;
+  z-index: 100;
+}
+
+section .card .image{
+  height: 140px;
+  width: 140px;
+  border-radius: 50%;
+  padding: 3px;
+  background: #7d2ae8;
+}
+
+section .card .image img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.card .media-icons{
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card .media-icons i{
+  color: #fff;
+  opacity: 0.6;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.card .media-icons i:hover{
+  opacity: 1;
+}
+
+.card .name-profession{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  color: ;
+} 
+
+.name-profession .name{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.name-profession .profession{
+  font-size:15px;
+  font-weight: 500;
+}
+
+.card .rating{
+  display: flex;
+  align-items: center;
+  margin-top: 18px;
+}
+
+.card .rating i{
+  font-size: 18px;
+  margin: 0 2px;
+  color:crimson;
+}
+
+.card .button{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.card .button button{
+  background: #7d2ae8;
+  outline: none;
+  border: none;
+  color: #fff;
+  padding: 8px 22px;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.button button:hover{
+  background: #6616d0;
+}
+
+.swiper-pagination{
+  position: absolute;
+}
+
+.swiper-pagination-bullet{
+  height: 7px;
+  width: 26px;
+  border-radius: 25px;
+  background: #7d2ae8;
+}
+
+.swiper-button-next, .swiper-button-prev{
+  opacity: 0.7;
+  color: #7d2ae8;
+  transition: all 0.3s ease;
+}
+.swiper-button-next:hover, .swiper-button-prev:hover{
+  opacity: 1;
+  color: #7d2ae8;
+}
+body{
+    background-color:#e0b589;
+}
+        .hem{
+            display: flex;
+    justify-content: center;
+    align-items: center;
+    height:0vh;
+    background-color: #f5f6f6;
+    font-family: 'Roboto', sans-serif;
+            
+            margin-right:10%;
+            
+        }
+.hem container
+{
+    width: 600px;
+    border: 2px solid #333;
+    padding: 15px 10px;
+}
+.hem container h2
+{
+    text-align: center;
+    margin-bottom: 15px
+}
+.hem textarea
+{
+    height: 20px;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid #aaa;
+    background-color: transparent;
+    margin-bottom: 10px;
+    resize: none;
+    outline: none;
+    transition: .5s
+}
+
+.hem input[type="submit"], button
+{
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+.hem input[type="submit"]
+{
+    color: #fff;
+    background-color: #273c75
+}
+.hem button
+{
+    color: #333;
+    background-color: transparent
+}
+.hem btn
+{
+    display: none
+}
+    </style>
+</head>
+<body>
+
+  <section>
+    
+    <div class="swiper mySwiper container">
+      <div class="swiper-wrapper content">
+
+        <div class="swiper-slide card">
+          <div class="card-content">
+            <div class="image">
+              <img src="https://writestylesonline.com/wp-content/uploads/2020/01/Three-Things-To-Consider-When-Deciding-On-Your-LinkedIn-Profile-Picture-1024x1024.jpg" alt="">
+            </div>
+
+            <div class="media-icons">
+              <i class="fab fa-facebook"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-github"></i>
+            </div>
+
+            <div class="name-profession">
+              <span class="name">Havena</span>
+              <span class="profession">Visiter</span>
+            </div>
+
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+
+            <div class="button">
+              <button class="aboutMe">About Me</button>
+              
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide card">
+          <div class="card-content">
+            <div class="image">
+              <img src="https://cdn.techgyd.com/100-Cute-Images-of-Girls-Pets-Babies-37-1024x640.jpg" alt="">
+            </div>
+
+            <div class="media-icons">
+              <i class="fab fa-facebook"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-github"></i>
+            </div>
+
+            <div class="name-profession">
+              <span class="name">Madie</span>
+              <span class="profession">Visiter</span>
+            </div>
+
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+
+            <div class="button">
+              <button class="aboutMe">About Me</button>
+              
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide card">
+          <div class="card-content">
+            <div class="image">
+              <img src="https://d2az3zd39o5d63.cloudfront.net/linkedin-profile-picture-sunglasses.jpg" alt="">
+            </div>
+
+            <div class="media-icons">
+              <i class="fab fa-facebook"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-github"></i>
+            </div>
+
+            <div class="name-profession">
+              <span class="name">Deepak</span>
+              <span class="profession">Visiter</span>
+            </div>
+
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+
+            <div class="button">
+              <button class="aboutMe">About Me</button>
+            
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide card">
+          <div class="card-content">
+            <div class="image">
+              <img src="https://cdn.goodgallery.com/d722b21a-d14b-4a0b-b7df-b3d3a1719fba/r/1280/26m2bw8f/modern-corporate-headshots-philadelphia.webp" alt="">
+            </div>
+
+            <div class="media-icons">
+              <i class="fab fa-facebook"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-github"></i>
+            </div>
+
+            <div class="name-profession">
+              <span class="name">Portilio</span>
+              <span class="profession">Visiter</span>
+            </div>
+
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+
+            <div class="button">
+              <button class="aboutMe">About Me</button>
+            
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide card">
+          <div class="card-content">
+            <div class="image">
+              <img src="https://www.tampaheadshots.com/images/6901_8x10_web.jpg" alt="">
+            </div>
+
+            <div class="media-icons">
+              <i class="fab fa-facebook"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-github"></i>
+            </div>
+
+            <div class="name-profession">
+              <span class="name">Bamas fed</span>
+              <span class="profession">Visiter</span>
+            </div>
+
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+
+            <div class="button">
+              <button class="aboutMe">About Me</button>
+              
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide card">
+          <div class="card-content">
+            <div class="image">
+              <img src="https://lunchbreakheadshots.com/wp-content/uploads/2020/05/Best-Corporate-Headshot-Photographer-San-Francisco-and-New-York-City-41%28pp_w1200_h1800%29.jpg" alt="">
+            </div>
+
+            <div class="media-icons">
+				<i class="fab fa-facebook"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-github"></i>
+            </div>
+
+            <div class="name-profession">
+              <span class="name">Rahul</span>
+              <span class="profession">Visiter</span>
+            </div>
+
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+
+            <div class="button">
+              <button class="aboutMe">About Me</button>
+              
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide card">
+          <div class="card-content">
+            <div class="image">
+              <img src="https://images.squarespace-cdn.com/content/v1/58762f0f893fc0d948112bf7/1581513817850-0R50WMPMS6UBCKZPZYPC/Manchester_Headshot2020_001.jpg?format=2500w" alt="">
+            </div>
+
+            <div class="media-icons">
+              <i class="fab fa-facebook"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-github"></i>
+            </div>
+
+            <div class="name-profession">
+              <span class="name">Skotty</span>
+              <span class="profession">Visiter</span>
+            </div>
+
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+
+            <div class="button">
+              <button class="aboutMe">About Me</button>
+              
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide card">
+          <div class="card-content">
+            <div class="image">
+              <img src="https://images.squarespace-cdn.com/content/v1/564505c2e4b0ba0f65ea17b4/1569874668216-9G5A0KWU7MVNQABI74K7/Print-%284%29-min.jpg?format=2500w" alt="">
+            </div>
+
+            <div class="media-icons">
+              <i class="fab fa-facebook"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-github"></i>
+            </div>
+
+            <div class="name-profession">
+              <span class="name">Tokyo</span>
+              <span class="profession">Visiter</span>
+            </div>
+
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+
+            <div class="button">
+              <button class="aboutMe">About Me</button>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide card">
+          <div class="card-content">
+            <div class="image">
+              <img src="https://expertphotography.b-cdn.net/wp-content/uploads/2019/12/professional-headshots-man-posing-outdoors-1.jpg" alt="">
+            </div>
+
+            <div class="media-icons">
+              <i class="fab fa-facebook"></i>
+              <i class="fab fa-twitter"></i>
+              <i class="fab fa-github"></i>
+            </div>
+
+            <div class="name-profession">
+              <span class="name">Denver</span>
+              <span class="profession">Visiter</span>
+            </div>
+
+            <div class="rating">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="far fa-star"></i>
+              <i class="far fa-star"></i>
+            </div>
+
+            <div class="button">
+              <button class="aboutMe">About Me</button>
+              <button class="hireMe">Hire Me</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+  </section>
+
+  <!-- Swiper JS -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 3,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+  <section class="hem">
+ <div class="container">
+                <h2>Leave Us a Comment</h2>
+                <form>
+                    <textarea placeholder='Add Your Comment'></textarea>
+                    <div class="btn">
+                        <input type="submit" value='Comment'>
+                        <button id='clear'>Cancel</button>
+                    </div>
+                </form>
+            </div>
+    </section>
+        
+</body>
+</html>
